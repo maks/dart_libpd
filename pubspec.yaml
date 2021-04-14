@@ -1,0 +1,19 @@
+name: dart_libpd
+description: Dart FFI-binding to libpd
+version: 0.0.1
+homepage: https://github.com/maks/dart_libpd
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  ffi: ^1.0.0
+
+dev_dependencies:
+  ffigen: ^2.4.2
+  pedantic: ^1.9.0
+
+ffigen:
+  output: "lib/generated_bindings.dart"
+  headers:
+    entry-points:
+      - "libpd/z_libpd.h"
